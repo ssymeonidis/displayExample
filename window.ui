@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>window</class>
+ <widget class="QMainWindow" name="window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>818</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>window</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="glWidget" name="glWidgetQT">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>-10</y>
+      <width>640</width>
+      <height>512</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="maskBox">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>10</y>
+      <width>141</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Display Options</string>
+    </property>
+    <widget class="QRadioButton" name="mask1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>117</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>no mask</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mask2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>117</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>full mask</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mask3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>117</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>red mask</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>818</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>glWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>glWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>mask1</sender>
+   <signal>clicked()</signal>
+   <receiver>window</receiver>
+   <slot>updateMask()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>728</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>408</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mask2</sender>
+   <signal>clicked()</signal>
+   <receiver>window</receiver>
+   <slot>updateMask()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>728</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>408</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mask3</sender>
+   <signal>clicked()</signal>
+   <receiver>window</receiver>
+   <slot>updateMask()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>728</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>408</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>updateMask()</slot>
+ </slots>
+</ui>
